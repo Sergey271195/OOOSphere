@@ -1,7 +1,6 @@
 css/bootstrap*
-js/*.js
+js/bootstrap.min.js
 *.php
-!js/script.js
 css/fonts/stylesheet.css
 *.woff
 *.eot
@@ -10,3 +9,4 @@ css/fonts/stylesheet.css
 !css/fonts/Gilroy-Bold.ttf
 customtheme/
 video/
+debug.log

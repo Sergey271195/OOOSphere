@@ -340,6 +340,36 @@ img {
     left: 0;
 }
 
+.circle-8 {
+    right: 0;
+    top: 2253px;
+}
+
+.circle-9 {
+    left: 0;
+    top: 2814px;
+}
+
+.circle-10 {
+    left: 0;
+    top: 2971px;
+}
+
+.circle-11 {
+    right: 0;
+    top: 2971px;
+}
+
+.circle-12 {
+    right: 0;
+    top: 3603px;
+}
+
+.circle-13 {
+    left: 0;
+    top: 3946px;
+}
+
 /* PROGRAMMS SECTION */
 
 #programms-section {
@@ -462,11 +492,30 @@ td, th {
     text-align: center;
     font-weight: normal;
     padding: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    color: #1F1F1F;
+}
+
+td:first-of-type, th:first-of-type {
+    position: relative;
+    padding-left: 50px;
+}
+
+td:last-of-type, th:last-of-type {
+    padding-right: 50px;
+}
+
+tr:last-of-type {
+    padding-bottom: 50px;
 }
 
 th {
     color: #FFFFFF;
     background-color: #8BC43F;
+    font-size: 16px;
 }
 
 tr:first-of-type > td {
@@ -474,13 +523,11 @@ tr:first-of-type > td {
 }
 
 tr > td {
+    position: relative;
+    background-color: #F0F0F0;
+    border-bottom: 0.7px solid #A8A8A8;
     padding-top: 25px;
     padding-bottom: 25px;
-}
-
-tr > td {
-    background-color: #7F7F7F;
-    border-bottom: 1px solid black;
 }
 
 tr:last-of-type > td {
@@ -491,8 +538,24 @@ tr:last-of-type, tr:first-of-type {
     border: 0;
 }
 
-tr > td:first-of-type, td:last-of-type {
-    border: 0;
+tr > td:first-of-type::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    left: 0;
+    bottom: -1px;
+    height: 1px;
+    background-color:#F0F0F0;
+}
+
+tr > td:last-of-type::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    background-color:#F0F0F0;
 }
 
 #table-container {
@@ -505,11 +568,287 @@ tr > td:first-of-type, td:last-of-type {
 
 .table-comment {
     text-align: start;
-    margin-top: 20px;
+    margin-top: 35px;
     align-self: start;
 }
 
 /* COACHES SECTION */
+
+.coaches-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+    margin-top: 60px;
+    width: 90%;
+}
+
+#coaches-grid-container {
+    justify-content: center;
+}
+
+.coach-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.coach-photo {
+    border-radius: 20px;
+}
+
+.coach-photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coach-name {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    color: #1F1F1F;
+}
+
+.coach-about {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1F1F1F;
+}
+
+.coach-position {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    color: #1F1F1F;
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.coach-about > li:before {
+    content: ' - '
+}
+
+.completed-task-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 31px;
+    color: #0D1255;
+    margin-bottom: 20px;
+}
+
+/* REVIWES SECTION */
+
+.slick-next.slick-arrow {
+    background: url('./images/вправо.svg');
+    width: 46px;
+    height: 46px;
+    right: -100px;
+}
+
+.slick-next:before, .slick-prev:before {
+    content: ''!important;
+}
+
+.slick-prev.slick-arrow {
+    background: url('./images/влево.svg');
+    width: 46px;
+    height: 46px;
+    left: -100px;
+}
+
+.slick-prev:hover, .slick-prev:focus  {
+    background: url('./images/влево.svg')!important;
+}
+
+.slick-next:hover, .slick-next:focus {
+    background: url('./images/вправо.svg')!important;
+}
+
+.slider-content {
+    min-height: 300px!important;
+    background: #EBEBEB;
+    border-radius: 20px;
+    display: flex!important;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+}
+
+.review-image {
+    flex: 0.8;
+    margin-right: 30px;
+}
+
+.review-content {
+    position: relative;
+    flex: 1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1F1F1F;
+}
+
+.review-quotes {
+    position: absolute;
+    top: -18px;
+}
+
+.review-author {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 136.5%;
+    color: #1F1F1F;
+    margin-bottom: 35px;
+}
+
+/* MAP STYLES */
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+#map-section {
+    justify-content: flex-end;
+    margin-top: 110px;
+}
+
+#map-container {
+    justify-content: flex-end;
+}
+
+#main-map-container {
+    width: 90%;
+}
+
+.company-contacts {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.company-telephone:before {
+    content: 'Телефон: ';
+}
+
+.company-email:before {
+    content: 'Email: ';
+}
+
+.company-address:before {
+    content: 'Адрес:'; 
+}
+
+/* FOOTER SECTION */
+
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: #000000;
+}
+
+/* MODAL */
+
+    
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    outline: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    margin: auto;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 30%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    font-size: 18px;
+    background: #FFFFFF;
+    border: 1px solid #8BC43F;
+    box-sizing: border-box;
+    border-radius: 20px;
+    justify-content: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    align-self: flex-end;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 36px;
+    color: #1F1F1F;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+
+/* FORM */
+
+span.wpcf7-form-control-wrap {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
 .form-solved-tasks-sections-bg {
     background: url('./images/background-form.png');
@@ -528,29 +867,25 @@ tr > td:first-of-type, td:last-of-type {
 .form-container {
     display: flex;
     flex-direction: column;
-    border: 1px solid #0D1255;
     padding: 40px;
-    padding-left: 60px;
-    padding-right: 40px;
-    width: 33%;
+    align-items: center;
 }
 
 .form-input {
     width: 85%;
     border: 0;
-    border-bottom: 1px solid #0D1255;
+    border-bottom: 1px solid #5E5E5E;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: normal;
     font-size: 14px;
-    color: #0D1255;
+    color: #5E5E5E;
     outline-style: none;
 }
 
 .form-input::placeholder {
-    color: #0D1255;
-    opacity: 0.6;
+    color: #5E5E5E;
 }
 
 .form-input:active, .form-input:focus {
@@ -558,195 +893,23 @@ tr > td:first-of-type, td:last-of-type {
     border-bottom: 1px solid #0D1255; 
 }
 
-.confirmation {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    color: #7F7F7F;
-    margin-bottom: 20px;
-}
 
 .form-button {
-    outline: none;
-    border: none;
-    background: #00ADE5;
-    font-weight: 600;
-    font-size: 16px;
-    color: #FFFFFF;
-    padding: 10px;
-    cursor: pointer;
+    align-self: center;
+    padding: 16px;
 }
 
-.form-description-container {
-    width: 50%;
-    margin-left: 40px;
-}
 
 .form-conditions {
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 168.5%;
-    color: #0D1255;
-    margin-bottom: 40px;
-}
-
-.form-conditions-list-title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    color: #0D1255;
-    margin-bottom: 20px;;
-}
-
-.form-conditions-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.form-conditions-list li {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 160%;
-    color: #0D1255;
-    margin-left: 18px;
-}
-
-.form-conditions-list li::before {
-    content: "\2022";  /* Add content:\2022 \2022 is the CSS Code/unicode for a bullet */
-    color: #00ADE5;; /* Change the color */
-    font-weight: bold; /* If you want it to be bold */
-    display: inline-block; /* Needed to add space between the bullet and the text */
-    width: 1em; /* Also needed for space (tweak if needed) */
-    margin-left: -1em; /* Also needed for space (tweak if needed) */
-}
-
-
-.coaches-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 30px;
-    margin-top: 60px;
-    width: 100%;
-}
-
-.coach-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.coach-about {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.coach-about > li:before {
-    content: '-'
-}
-
-.completed-task-title {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 31px;
-    color: #0D1255;
-    margin-bottom: 20px;
-}
-
-/* REVIWES SECTION */
-
-.reviews-main-container {
-    background-color: #7F7F7F;
-    width: 75%;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    align-self: center;
-    min-height: 200px;
-}
-
-.review-image {
-    flex: 0.4;
-}
-
-.review-content {
-    flex: 0.6;
-}
-
-/* MAP STYLES */
-
-.contacts-container {
-    display: flex;
-    flex-direction: column;
-}
-
-#map-section {
-    flex-direction: column;
-}
-
-.map-content {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    height: 220px;
-    background: #FFFFFF;
-    border: 0.7px solid #0D1255;
-    box-sizing: border-box;
-    width: 26%;
-    margin-left: 100px;
-    justify-content: center;
-}
-
-.map-content-text {
-    font-size: 18px;
-    color: #0D1255;
-    margin-left: 50px;
-    font-style: normal;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.map-content-contacts {
-    font-size: 16px;
-    color: #0D1255;
-    margin-left: 50px;
-    font-style: normal;
-    display: flex; 
-    align-items: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.footer {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.footer-content {
-    font-style: normal;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 14px;
-    color: #0D1255;
-}
-
-.modal-content {
-    background: transparent !important;
-    border: none !important;
+    font-size: 11px;
+    line-height: 145%;
+    color: #AAAAAA;
+    width: 85%;
 }
 
 
-span.wpcf7-form-control-wrap {
-    display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
 @media (max-width: 1200px){
     .header-right-container {
