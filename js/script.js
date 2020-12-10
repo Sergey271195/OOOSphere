@@ -9,7 +9,7 @@ $('.slider').slick({
   });
 
   
-
+window.onload = function() {
   
   var modal = document.getElementById("myModal");
   
@@ -36,3 +36,4 @@ $('.slider').slick({
       modal.style.display = "none";
     }
   }
+}
