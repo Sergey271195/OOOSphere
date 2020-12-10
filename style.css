@@ -209,6 +209,7 @@ img {
     position: absolute;
     right: 0px;
     top: 0px;
+    z-index: -1;
 }
 
 .background-element {
@@ -350,23 +351,26 @@ img {
     width: 70%;
 }
 
-.individual {
-    flex: 0.5;
-    margin-right: 50px;
-    background: #F6931E;
+.programs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    column-gap: 50px;
+}
+
+.programs-content-container {
     padding: 45px;
     border-radius: 40px;
     display: flex;
     flex-direction: column;
 }
 
+.individual {
+    background: #F6931E;
+}
+
 .group {
-    flex: 0.5;
     background: #8BC43F;
-    padding: 45px;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
 }
 
 #programms-section-container {
@@ -439,7 +443,73 @@ ul > li {
     color: #8BC43F;
 }
 
-/*  */
+/* SCHEDULE SECTION */
+
+#schedule-section {
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+td, th {
+    text-align: center;
+    font-weight: normal;
+    padding: 20px;
+}
+
+th {
+    color: #FFFFFF;
+    background-color: #8BC43F;
+}
+
+tr:first-of-type > td {
+    padding: 20px;
+}
+
+tr > td {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+tr > td {
+    background-color: #7F7F7F;
+    border-bottom: 1px solid black;
+}
+
+tr:last-of-type > td {
+    border: 0;
+}
+
+tr:last-of-type, tr:first-of-type {
+    border: 0;
+}
+
+tr > td:first-of-type, td:last-of-type {
+    border: 0;
+}
+
+#table-container {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.table-comment {
+    text-align: start;
+    margin-top: 20px;
+    align-self: start;
+}
+
+/* COACHES SECTION */
 
 .form-solved-tasks-sections-bg {
     background: url('./images/background-form.png');
@@ -554,12 +624,27 @@ ul > li {
 }
 
 
-.completed-tasks-grid {
+.coaches-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
     margin-top: 60px;
-    row-gap: 30px;
+    width: 100%;
+}
+
+.coach-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.coach-about {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.coach-about > li:before {
+    content: '-'
 }
 
 .completed-task-title {
@@ -569,6 +654,33 @@ ul > li {
     line-height: 31px;
     color: #0D1255;
     margin-bottom: 20px;
+}
+
+/* REVIWES SECTION */
+
+.reviews-main-container {
+    background-color: #7F7F7F;
+    width: 75%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-self: center;
+    min-height: 200px;
+}
+
+.review-image {
+    flex: 0.4;
+}
+
+.review-content {
+    flex: 0.6;
+}
+
+/* MAP STYLES */
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
 }
 
 #map-section {
