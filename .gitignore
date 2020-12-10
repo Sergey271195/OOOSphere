@@ -1,0 +1,12 @@
+css/bootstrap*
+js/*.js
+*.php
+!js/script.js
+css/fonts/stylesheet.css
+*.woff
+*.eot
+*.ttf
+!css/fonts/BebasNeue\ Regular.ttf
+!css/fonts/Gilroy-Bold.ttf
+customtheme/
+video/
