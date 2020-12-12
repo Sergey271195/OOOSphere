@@ -1,6 +1,6 @@
 css/bootstrap*
 js/bootstrap.min.js
-*.php
+
 css/fonts/stylesheet.css
 *.woff
 *.eot
