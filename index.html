@@ -63,23 +63,23 @@
                 <img src = './images/logo.png' alt = 'logo'/>
             </div>
 
-            <div style = 'position: relative;'>
+            <div class = 'anchor-link-div'>
                 <a href = '#about' class = 'anchor-link'>О школе</a>
                 <img class = 'header-button-image' src = './images/activebutton.png'/>
             </div>
-            <div style = 'position: relative;'>
+            <div class = 'anchor-link-div'>
                 <a href = '#coaches' class = 'anchor-link'>Тренеры</a>
                 <img class = 'header-button-image' src = './images/activebutton.png'/>
             </div>
-            <div style = 'position: relative;'>
+            <div class = 'anchor-link-div'>
                 <a href = '#schedule' class = 'anchor-link' id = 'schedule-link'>Расписание</a>
                 <img class = 'header-button-image' src = './images/activebutton.png'/>
             </div>
-            <div style = 'position: relative;'>
+            <div class = 'anchor-link-div'>
                 <a href = '#reviews' class = 'anchor-link'>Отзывы</a>
                 <img class = 'header-button-image' src = './images/activebutton.png'/>
             </div>
-            <div style = 'position: relative;'>
+            <div class = 'anchor-link-div'>
                 <a href = '#contacts' class = 'anchor-link'>Контакты</a>
                 <img class = 'header-button-image' src = './images/activebutton.png'/>
             </div>
@@ -93,7 +93,7 @@
     </header>
 
     <section class = 'section'>
-        <div class = 'mycontainer'>
+        <div class = 'mycontainer' id = 'main-container'>
             <div class = 'main-banner-container'>
                 <div class = 'first-title'>
                     Школа самообороны<br/>и психологии «ЕНОТ»
@@ -114,8 +114,10 @@
             </div>
 
             <div class = 'main-photo-div'>
-                <img src = './images/mainphoto.png' alt ='mainphoto' />
+                <img src = './images/Frame 29.png' style = 'position: absolute; right: 50px; top: 30px'/>
+                <img class = 'main-photo-itself' src = './images/Ellipse 2.jpg' alt ='mainphoto' />
             </div>
+
         </div>
     </section>
 
@@ -383,7 +385,7 @@
 
     <!-- REVIEWS SECTION -->
 
-    <section class = 'section' style = 'flex-direction: column; margin-top: 150px;'>
+    <section class = 'section' id = 'reviews-section'>
         <a name = 'reviews'></a>
         <div class = 'mycontainer-title'>
             <div class = 'section-title'>
@@ -397,11 +399,13 @@
 
             <div class = 'slider-content'>
                 <div class = 'review-image'>
-                    <img src = './images/review.png' />
+                    <img src = './images/Rectangle 34.png' />
+                    <img src = './images/Rectangle 38.png'  />
                 </div>
                 <div class = 'review-content'>
                     <div class = 'review-quotes'>
                         <img src = './images/quotes.png' alt = 'quotes'/>
+                        
                     </div>
                     <p>
                         Мы благодарны школе 
@@ -477,12 +481,18 @@
                 <div class = 'company-address company-contacts'>
                     Улица Жиделева 1к 22, Иваново
                 </div>
-                <a href = 'tel:+79612488885' class = 'company-telephone company-contacts'>
-                     +7 (961) 248-88-85
-                </a>
-                <a href = 'mailto:phanat.89@mail.ru' class = 'company-email company-contacts'>
-                    phanat.89@mail.ru
-                </a>
+                <div class = 'company-contacts' style = 'display: flex; align-items: center'>
+                    <p style = 'margin-right: 5px'>Телефон:</p>
+                    <a href = 'tel:+79612488885' class = 'company-telephone company-contacts'>
+                        +7 (961) 248-88-85
+                    </a>
+                </div>
+                <div class = 'company-contacts' style = 'display: flex; align-items: center'>
+                    <p style = 'margin-right: 5px'>Email:</p>
+                    <a href = 'mailto:phanat.89@mail.ru' class = 'company-email company-contacts'>
+                        phanat.89@mail.ru
+                    </a>
+                </div>
 
                 <div class = 'sign-up-button' id = 'signupbtn1' style = 'width: 80%'>
                     Записаться на пробное занятие
@@ -516,8 +526,8 @@
                 <input class = 'form-input'  type = 'text' placeholder="Email"/>
                 <div class = 'form-conditions'>
                     нажимая на кнопку «отправить» , вы соглашаетесь
-                    <a href = './docs/Politika-konfidencialnosti.pdf' target = '_blank'><b>с политикой конфиденциальности</b></a>
                 </div>
+                <a class = 'confidence' href = './docs/Politika-konfidencialnosti.pdf' target = '_blank'>с политикой конфиденциальности</a>
                 <div class = 'sign-up-button form-button'>Записаться</div>
             </div>
         </div>
